@@ -1,0 +1,30 @@
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+body {
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 140%;
+  background-color: #F5F3F5;
+}
+
+
+
+.demo {
+  display: inline-block;
+  width: 24%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.demo textarea {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  height: 32px;
+  padding: 6px 0px;
+  resize: none;
+  text-align: center;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
