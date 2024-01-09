@@ -10,11 +10,629 @@
     <link href="css/demo-page.css" rel="stylesheet" media="all">
     <link href="css/imagehover.min.css" rel="stylesheet" media="all">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&display=swap" rel="stylesheet">
+    <style>
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+:root{
+	--bg-color: #aaaaaa;
+	--text-color: #0d0d0d;
+	--main-color: #eb4a4a;
+	--second-color: rgb(33, 33, 33);
+	--other-color: #878787;
+	--h1-font: 5.2rem;
+	--h2-font: 3.5rem;
+	--p-font: 1.1rem;
+}
+
+body{
+	background: var(--bg-color);
+	color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+header{
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: transparent;
+	padding: 22px 16%;
+	border-bottom: 1px solid transparent;
+	transition: all .40s ease;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+/* modificacion 7/1  */
+.logo{
+	color: #020312;
+	font-size: 1.5rem;
+	transform: scaleY(.9);
+}
+.logo img{
+	width: 205px;
+	height: auto;
+}
+.navbar{
+	display: flex;
+}
+.navbar a {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: color 0.4s ease, background-image 0.4s ease;
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.4s ease;
+}
+
+.navbar a:hover {
+    color: var(--text-color);
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+#menu-icon{
+	font-size: 36px;
+	color: var(--text-color);
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+}
+
+section{
+	padding: 160px 16% 90px;
+}
+
+
+/* fin header */
+
+
+
+
+
+.home{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background: url(../img/background.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+
+.home-text h1{
+	margin: 20px 0;
+	font-size: var(--h1-font);
+	font-weight: bold;
+	line-height: 1.1;
+	letter-spacing: 2px;
+	height: 10rem;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+span{
+	color: var(--main-color);
+	/* border: 2px solid red; */
+	font-size: 2rem;
+	text-align: center;
+	
+}
+
+.home-text h4{
+	color: var(--main-color);
+	font-size: 24px;
+	font-weight: 600;
+}
+.home-text h3{
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 3rem;
+	font-family: 'Kumbh Sans', sans-serif;
+	margin-top: -5rem;
+}
+
+.btn{
+	display: inline-block;
+	padding: 14px 40px;
+	border-radius: 0.5rem;
+	font-size: 17px;
+	font-weight: 500;
+	background: var(--main-color);
+	color: var(--text-color);
+	border: 1px solid var(--main-color);
+	transition: all .40s ease;
+}
+.btn:hover{
+	transform: scale(1.01) translateY(-5px);
+	background: transparent;
+	border: 1px solid var(--main-color);
+}
+
+/* -------------------------- */
+/* FIN HOME */
+/* -------------------------- */
+
+header.sticky{
+	padding: 10px 16%;
+	background: rgba(115, 115, 115, 0.9);
+	border-bottom: 1px solid #0e1630;
+}
+
+
+
+
+
+
+/* inicio about */
+
+.about{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2rem;
+}
+.about-text h4{
+	margin: 10px 0;
+	color: var(--main-color);
+	font-size: 20px;
+	font-weight: 600;
+}
+.about-text h2{
+	font-size: var(--h2-font);
+	font-family: 'Kumbh Sans', sans-serif;
+
+}
+.about-text p{
+	color: var(--second-color);
+	font-size: var(--p-font);
+	line-height: 30px;
+	margin-bottom: 2rem;
+}
+.about-gri{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 3rem;
+}
+.about-in h5{
+	font-size: 22px;
+	font-weight: 600;
+}
+.about-img img {
+    width: 30rem;
+    height: 50rem;
+    object-fit: cover; 
+    /* max-width: 960px;
+    max-height: 2200px; */
+    border-radius: 10px;
+}
+
+.about-text .btn{
+	width: 10rem;
+}
+/* fin about */
+
+
+
+
+
+/* inicio service */
+
+.main-text{
+	text-align: center;
+}
+.main-text h2{
+	font-size: var(--h2-font);
+	margin-bottom: 10px;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+.main-text h4{
+	color: var(--main-color);
+	font-size: 24px;
+	font-weight: 600;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+
+/* .content_ppal_servicios{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+} */
+/* .fila_servicios {
+	display: flex;
+	width: 20rem;
+
+} */
+.fila_servicios .content_servicios{
+	display: flex;
+	width: 100%;
+	margin-top: 5rem;
+	align-items: center;
+	justify-content: center;
+
+	/* flex-direction: column; */
+}
+.fila_servicios .servicio {
+    margin: 1rem;
+    width: 19rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    background: linear-gradient(to bottom, rgb(156, 156, 156), rgba(156, 156, 156, 0));
+}
+
+.fila_servicios .titulo_servicio{
+	display: flex;
+	width: 100%;
+}
+.fila_servicios .logo_servicio{
+	margin-right: 2rem;
+	margin-left: 1rem;
+}
+
+
+
+
+.services-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	margin-top: 5rem;
+}
+.contentbox{
+	color: #fff;
+}
+.box{
+	padding: 45px;
+	background: #12141c;
+	border-top: 5px solid transparent;
+	/* border-radius: 0.5rem; */
+	border-radius: 50%;
+	transition: all .40s ease;
+	cursor: pointer;
+	width: 240px;
+}
+.box h3{
+	font-size: 24px;
+	font-weight: 600;
+	margin: 15px 0;
+	transition: all .40s ease;
+}
+.box p{
+	color: var(--second-color);
+	font-size: var(--p-font);
+	line-height: 30px;
+}
+.box:hover{
+	transform: scale(1.01) translateY(-5px);
+	border-top: 5px solid var(--main-color);
+}
+.box:hover h3{
+	color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+.row img{
+	height: auto;
+	width: 100%;
+	border-radius: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+.row{
+	padding: 25px;
+	background: #12141c;
+	border-radius: 0.5rem;
+	transition: all .40s ease;
+}
+.main-row{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+.row h3{
+	font-size: 25px;
+	font-weight: 700;
+}
+.row h6{
+	color: var(--main-color);
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.row-icon i{
+	font-size: 21px;
+}
+.row:hover{
+	transform: scale(1.01) translateY(-5px);
+	cursor: pointer;
+}
+
+
+
+
+
+
+.contact{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 3rem;
+}
+.contact-text h4{
+	margin: 15px 0;
+	color: var(--main-color);
+	font-size: 20px;
+	font-weight: 600;
+}
+.contact-text h2{
+	font-size: var(--h2-font);
+}
+.contact-text p{
+	color: var(--second-color);
+	font-size: var(--p-font);
+	line-height: 30px;
+	margin-bottom: 2rem;
+}
+.contact-list{
+	margin-bottom: 3rem;
+}
+.contact-list li{
+	margin-bottom: 10px;
+	display: block;
+}
+.contact-list li a{
+	display: block;
+	color: var(--second-color);
+	font-size: var(--p-font);
+	font-weight: 600;
+	transition: all .40s ease;
+}
+.contact-list li a:hover{
+	transform: scale(1.01) translateY(-5px);
+	color: var(--main-color);
+}
+.contact-icons i{
+	height: 40px;
+	width: 40px;
+	background: #12141c;
+	border-radius: 0.5rem;
+	color: var(--main-color);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	margin-right: 10px;
+	transition: all .40s ease;
+}
+.contact-icons i:hover{
+	transform: scale(1.01) translateY(-5px);
+	color: var(--text-color);
+	background: var(--main-color);
+}
+
+.contact-form form{
+	position: relative;
+}
+.contact-form form input,
+form textarea{
+	border: none;
+	outline: none;
+	width: 100%;
+	padding: 18px;
+	background: #12141c;
+	color: var(--text-color);
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	border-radius: 0.5rem;
+}
+.contact-form textarea{
+	resize: none;
+	height: 220px;
+}
+.contact-form form .send{
+	display: inline-block;
+	font-size: 17px;
+	font-weight: 500;
+	background: var(--main-color);
+	color: var(--text-color);
+	width: 190px;
+	transition: all .40s ease;
+	cursor: pointer;
+}
+
+.last-text p{
+	text-align: center;
+	padding: 15px;
+	color: var(--second-color);
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.top{
+	position: fixed;
+	bottom: 2.1rem;
+	right: 2.1rem;
+}
+.top i{
+	color: var(--text-color);
+	background: var(--main-color);
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 0.5rem;
+}
+
+
+
+
+@media (max-width: 1325px){
+	header{
+		padding: 16px 3%;
+	}
+	header.sticky{
+		padding: 8px 3%;
+	}
+	section{
+		padding: 130px 3% 60px;
+	}
+
+	.services-content{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 970px){
+	.about-img img {
+		/* height: 25rem; */
+		width: 100vw;
+		height: 20rem;
+	}
+	:root{
+		--h1-font: 4.2rem;
+	  --h2-font: 2.9rem;
+	  --p-font: 1rem;
+	}
+	section{
+		padding: 70px 3% 60px;
+	}
+	.home{
+		height: 85vh;
+	}
+	.about{
+		grid-template-columns: 1fr;
+	}
+	.about-img{
+		text-align: center;
+	}
+	.fila_servicios .content_servicios{
+		flex-direction: column;
+	}
+	.content_ppal_servicios{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+} 
+.fila_servicios {
+	display: flex;
+	width: 20rem;
+
+} 
+
+
+	.contact{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 830px){
+
+	.content_ppal_servicios{
+		display: block;
+		margin-left: 4rem;
+	}
+
+	#menu-icon{
+		display: block;
+	}
+	.navbar{
+		position: absolute;
+		top: -600px;
+		right: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		background: #12141c;
+		text-align: left;
+		transition: all .40s ease;
+	}
+	.about-img img {
+		height: 15rem;
+	}
+	.navbar a{
+		display: block;
+		padding: 1rem;
+		margin: 1rem;
+	}
+	.navbar.active{
+		top: 100%;
+	}
+	:root{
+		--h1-font: 3.7rem;
+	  --h2-font: 2.7rem;
+	}
+}
+    </style>
+
+
+
   </head>
 
   <body>
 
-      <div class="effects">
+      <!-- <div class="effects">
         <h3>The Classes</h3>
         <div class="demo">
           <figure class="imghvr-fade"><img src="example-image.jpg" alt="example-image">
@@ -556,10 +1174,334 @@
           </figure>
           <textarea onclick="this.focus();this.select()" readonly="readonly">imghvr-fall-away-ccc</textarea>
         </div>
-      </div>
+      </div> -->
 
 
-  
+	<!---header--->
+	<header>
+		<a href="#services" class="logo">
+			<!-- <img src="img/logo.png"> -->
+			<p>DEVKO STUDIO</p>
+		</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="#home">Inicio</a></li>
+			<li><a href="#about">Nosotros</a></li>
+			<li><a href="#services">Servicios</a></li>
+			<li><a href="#portfolio">Portafolio</a></li>
+			<li><a href="#contact">Contacto</a></li>
+		</ul>
+	</header>
+
+
+
+
+	<!---home--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<h4></h4>
+				<h1>Devko
+					<span>studio</span>
+				</h1>
+			<h3>Arquitectura y Contrucción <br></h3>
+			<a href="#contact" class="btn">Cotizanos</a>
+		</div>
+	</section>
+
+	
+	<!---about--->
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="img/estudio.jpg">
+		</div>
+
+		<div class="about-text">
+			<h2>DEVKO Studio</h2>
+			<h4>Nuestro objetivo</h4>
+			<p>En <b>Devko</b> creamos experiencias inolvidables que permiten al usuario conectar con la marca y su mensaje. Nuestro enfoque consiste en entender la personalidad de cada cliente y reflejarla en el diseño del stand, creando una experiencia única para los usuarios.Ofrecemos soluciones técnicas y constructivas innovadoras que abarcan tanto el aspecto estético como el tecnológico. Consideramos factores geométrico-espaciales y estético-formales para crear estructuras aéreas, que incluyen mobiliario de diseño, diseño de interiores, jardinería y diseño lumínico.</p>
+			<p>Nos comprometemos a ofrecer soluciones personalizadas que satisfagan las necesidades específicas de nuestros clientes y resalten la belleza y la funcionalidad en cualquier espacio. soluciones técnicas y constructivas innovadoras que abarcan tanto el aspecto estético como el tecnológico. Consideramos factores geométrico-espaciales y estético-formales para crear estructuras aéreas, que incluyen mobiliario de diseño, diseño de interiores, jardinería y diseño lumínico.</p>
+			
+
+			<p></p>
+
+				<a href="#contact" class="btn">Contacto</a>
+			
+		</div>
+	</section>
+	<!-- fin about  -->
+
+	<!---services--->
+	<section class="services" id="services">
+		<div class="main-text">
+			<h2>NUESTROS SERVICIOS</h2>
+			<h4>Arquitectura y Construcción</h4>
+		</div>
+
+		<div class="content_ppal_servicios">
+
+			<div class="fila_servicios">
+				<div class="content_servicios">
+					<div class="servicio">
+		
+						<div class="titulo_servicio">
+							<img src="#" class="logo_servicio">
+							<h2>STANDS</h2>
+						</div>
+					
+					<p>
+						Ofrecemos soluciones integrales de diseño y construcción para espacios interiores y exteriores en todo el territorio nacional, con un enfoque de llave en mano.
+					</p>
+					</div>
+					<div class="servicio">
+		
+						<div class="titulo_servicio">
+							<img src="#" class="logo_servicio">
+							<h2>OFICINAS</h2>
+						</div>
+					
+					<p>
+						En nuestra empresa, contamos con opciones de diseño y construcción tanto artesanales como modulares para crear espacios recreativos y ambientaciones únicas.
+					</p>
+					</div>
+					<div class="servicio">
+		
+						<div class="titulo_servicio">
+							<img src="#" class="logo_servicio">
+							<h2>EXHIBIDORES</h2>
+						</div>
+					
+					<p>
+						Ofrecemos servicios de diseño y construcción de góndolas, mobiliario corporativo, vitrinas y elementos utilitarios para adaptarnos a las necesidades específicas de cada cliente.
+					</p>
+					</div>
+				</div>
+			</div>
+			<div class="fila_servicios">
+				<div class="content_servicios">
+					<div class="servicio">
+		
+						<div class="titulo_servicio">
+							<img src="#" class="logo_servicio">
+							<h2>LOCALES COMERCIALES</h2>
+						</div>
+					
+					<p>
+						Diseño y construcción en shoppings, galerías y locales comerciales.
+					</p>
+					</div>
+					<div class="servicio">
+		
+						<div class="titulo_servicio">
+							<img src="#" class="logo_servicio">
+							<h2>CONSULTORÍA</h2>
+						</div>
+					
+					<p>
+						Proporcionamos asesoramiento y planificación en auditoría para garantizar la evolución adecuada de tus proyectos y presupuestos.
+					</p>
+					</div>
+					<div class="servicio">
+		
+						<div class="titulo_servicio">
+							<img src="#" class="logo_servicio">
+							<h2>DISEÑO DE INTERIORES</h2>
+						</div>
+					
+					<p>
+						En nuestro equipo nos encargamos del diseño y construcción de espacios comerciales como locales y oficinas, así como también de hogares y departamentos, creando un ambiente agradable y funcional en cada caso.
+					</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!---portfolio--->
+
+	<section class="portfolio" id="portfolio">
+		<!--TITULOS-->
+		<div class="main-text">
+			<h2>Mi Portfolio</h2>
+			<h4>Algunos de mis distinguidos trabajos</h4>
+		</div>
+		<!--FIN TITULOS-->
+
+		
+		<div class="portfolio-content">
+
+		<!--CUADRO1-->
+			<div class="row">
+				<a href="portafolio1.html">
+					<img src="img/portfolio1.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Programación</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Páginas web para empresas o marcas</h3>
+			</div>
+		<!--FIN CUADRO1-->
+
+
+		<!--CUADRO2-->
+			<div class="row">
+				<a href="#">
+					<img src="img/portfolio2.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Arquitectura</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Proyectos arquitectónicos</h3>
+			</div>
+		<!--FIN CUADRO2-->
+
+		<!--CUADRO3-->
+			<div class="row">
+				<a href="#">
+					<img src="img/portfolio3.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Arte y Diseño</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Animaciones artísticas y diseño</h3>
+			</div>
+		<!--FIN CUADRO3-->
+
+		<!--CUADRO4-->
+			<div class="row">
+				<a href="#">
+					<img src="img/portfolio4.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Animaciones</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Animaciones creativas y diseño gráfico</h3>
+			</div>
+		<!--FIN CUADRO4-->
+
+		<!--CUADRO5-->
+			<div class="row">
+				<a href="#">
+					<img src="img/portfolio5.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Productos</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Modelado 3D de productos</h3>
+			</div>
+		<!--FIN CUADRO5-->
+
+		<!--CUADRO6-->
+			<div class="row">
+				<a href="#">
+					<img src="img/portfolio6.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Development</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Mobile app landing design & Services</h3>
+			</div>
+		<!--FINCUADRO6-->
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	<!---contact--->
+	<section class="contact" id="contact">
+		<div class="contact-text">
+			<h2>Contáctame</h2>
+			<h4>Vamos a trabajar juntos</h4>
+			<p>Enviame un mail a mi correo o mandar un mensaje por aca</p>
+			<div class="contact-list">
+				<li><a href="https://www.google.com.ar/maps/@-34.6158037,-58.5033386,12z" target="_blank" >Ciudad Autónoma de Buenos Aires - Argentina</a></li>
+				<li><a href="mailto:franromeroeze@gmail.com?subject=contacto&body=Hola%2C%20te%20contacto%20desde%20tu%20p%C3%A1gina%20y%20%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20ti%20y%20tu%20trabajo.%20" target="_blank">franromeroeze@gmail.com</a></li>
+				<li><a href="#">+5491151214792</a></li>
+			</div>
+			<div class="contact-icons">
+				<a href="https://www.linkedin.com/in/franco-ezequiel-romero-38ab541a3/"><i class='bx bxl-linkedin' ></i></a>
+				<a href="https://github.com/franromeroe"><i class='bx bxl-github' ></i></a>
+				<a href="#"><i class='bx bxl-dribbble' ></i></a>
+				<a href="https://www.youtube.com/channel/UCj8VgHtcox46beRA0DcoPDA"><i class='bx bxl-youtube' ></i></a>
+			</div>
+		</div>
+
+		<div class="contact-form">
+			<form action="">
+				<input type="" placeholder="introduce tu nombre " required>
+				<input type="email" placeholder="introduce tu email" required>
+				<input type="" placeholder="introduce el titulo">
+				<textarea name="" id="" cols="40" rows="10" placeholder="Escribe tu mensaje.." required></textarea>
+				<input type="submit" value="Enviar" class="send">
+			</form>
+		</div>
+	</section>
+
+	<div class="last-text">
+		<p> Franromeroe © 2022</p>
+	</div>
+
+	<!---scroll-top--->
+	<a href="#" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<!---custom js link--->
+	<script type="text/javascript" src="js/script.js"></script>
+
+
+
+
 
   </body>
 </html>
