@@ -21,7 +21,7 @@
 }
 
 body{
-	background: url(/img/back_dk.jpg);
+	background: url(../img/back_dk.jpg);
   background-position: center;
   background-size: cover;
 	color: var(--text-color);
