@@ -443,7 +443,7 @@ header.sticky{
 	height: 40px;
 	width: 40px;
 	background: #525252;
-	border-radius: 0.5rem;
+	border-radius: 50%;
 	color: var(--main-color);
 	display: inline-flex;
 	align-items: center;
@@ -491,6 +491,10 @@ form textarea{
 	cursor: pointer;
 }
 
+
+
+
+
 .last-text p{
 	text-align: center;
 	padding: 15px;
@@ -509,13 +513,46 @@ form textarea{
 	background: var(--main-color);
 	font-size: 20px;
 	padding: 10px;
-	border-radius: 0.5rem;
+	border-radius: 50%;
 }
 
 
+/* ////////////////////// */
+/* ////////////////////// */
+/* rotulo */
+.rotulo{
+  height: 10rem; 
+  background: gray; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.columna2 ul li a{
+  color: #020312;
+}
+.columna3 ul li a{
+  color: #020312;
+}
+.columna3{
+  display: flex;
+  align-items: center;
+}
+.bx-globe{
+  scale: 1.5;
+  color: rgb(59, 59, 59);
+  margin-bottom: 0.6rem;
+}
 
+
+.mediosPago{
+  width: 15rem;
+}
 
 @media (max-width: 1325px){
+  .filaServicios{
+    flex-direction: column;
+  }
 	header{
 		padding: 16px 3%;
 	}
@@ -530,9 +567,29 @@ form textarea{
 		display: flex;
 		flex-direction: column;
 	}
+  
 }
 
 @media (max-width: 970px){
+  .rotulo{
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .columna1{
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    width: 14rem;
+  }
+  .columna2{
+    display: none;
+  }
+  .columna3{
+    font-size: 0.9rem;
+  }
+  .columna3 .mediosPago{
+    width: 10rem;
+  }
 	.about-img img {
 		/* height: 25rem; */
 		width: 100vw;
@@ -573,7 +630,13 @@ form textarea{
 
 	.contact{
 		grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
 	}
+  .contact > * {
+    /* centro */
+    margin: 0 auto;
+ }
 }
 
 @media (max-width: 830px){
@@ -613,4 +676,5 @@ form textarea{
 		--h1-font: 3.7rem;
 	  --h2-font: 2.7rem;
 	}
+  
 }

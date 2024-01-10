@@ -11,7 +11,8 @@
     <link href="css/imagehover.min.css" rel="stylesheet" media="all">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   
@@ -631,21 +632,21 @@
 
 	<!---services--->
 	<section class="services" id="services">
-		<div class="main-text">
+		<div class="main-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
 			<h2>NUESTROS SERVICIOS</h2>
 			<h4>Arquitectura y Construcción</h4>
 		</div>
     <div class="filaServicios" style="display: flex; width: 100%; align-items: center; justify-content: center;">
-      <div class="demo">
+      <div class="demo" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2000">
         <figure class="imghvr-fold-right">
           <img src="./img/servicio_1.jpg" alt="example-image" style="width: 19rem; height: 15rem; object-fit: cover;">
-          <figcaption class="contentText_servicios">
+          <figcaption class="contentText_servicios" >
             <h3>STANDS</h3>
             <p>Ofrecemos soluciones integrales de diseño y construcción para espacios interiores y exteriores en todo el territorio nacional, con un enfoque de llave en mano.</p>
           </figcaption><a href="javascript:;"></a>
         </figure>
       </div>
-      <div class="demo">
+      <div class="demo" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000">
         <figure class="imghvr-fold-right">
           <img src="./img/servicio_2.jpg" alt="example-image"  style="width: 19rem; height: 15rem; object-fit: cover;">
           <figcaption class="contentText_servicios">
@@ -654,7 +655,7 @@
           </figcaption><a href="javascript:;"></a>
         </figure>
       </div>
-      <div class="demo">
+      <div class="demo" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000">
         <figure class="imghvr-fold-right">
           <img src="./img/servicio_3.jpg" alt="example-image" style="width: 19rem; height: 15rem; object-fit: cover;" >
           <figcaption class="contentText_servicios">
@@ -666,7 +667,7 @@
 
     </div>
     <div class="filaServicios" style="display: flex; width: 100%; align-items: center; justify-content: center;">
-      <div class="demo">
+      <div class="demo" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2000">
         <figure class="imghvr-fold-right">
           <img src="./img/servicio_4.jpg" alt="example-image" style="width: 19rem; height: 15rem; object-fit: cover;">
           <figcaption class="contentText_servicios">
@@ -675,7 +676,7 @@
           </figcaption><a href="javascript:;"></a>
         </figure>
       </div>
-      <div class="demo">
+      <div class="demo" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000">
         <figure class="imghvr-fold-right">
           <img src="./img/servicio_5.jpg" alt="example-image" style="width: 19rem; height: 15rem; object-fit: cover;">
           <figcaption class="contentText_servicios">
@@ -684,7 +685,7 @@
           </figcaption><a href="javascript:;"></a>
         </figure>
       </div>
-      <div class="demo">
+      <div class="demo" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000">
         <figure class="imghvr-fold-right">
           <img src="./img/servicio_6.jpg" alt="example-image" style="width: 19rem; height: 15rem; object-fit: cover;">
           <figcaption class="contentText_servicios">
@@ -874,9 +875,42 @@
 		</div>
 	</section>
 
-	<div class="last-text">
-		<p> Franromeroe © 2022</p>
-	</div>
+	<div class="rotulo" >
+    <div class="columna1" >
+      <a href="#" class="logo">
+        <p>DEVKO STUDIO</p>
+      </a>
+      <ul class="content_info">
+          <li><p>devkostudio@gmail.com</p></li>
+          <li><p>Palermo Soho, Ciudad Autónoma de Buenos Aires</p></li>
+      </ul>
+
+  </div>
+  <div class="columna2" >
+  
+      <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Quienes Somos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+      </ul>
+  </div>
+  
+  
+  <div class="columna3" style=" width: 25%; height: 80%;">
+      <ul>
+        <li>
+          <a href="#">
+            <img class="mediosPago" src="./img/medios_de_pago_color.png" ">
+          </a>
+        </li>
+          <li>
+            <a href="#">© 2023 - Impacto Visual</a>
+          </li>
+          
+      </ul>
+  </div> 
+  </div>
 
 	<!---scroll-top--->
 	<a href="#" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
@@ -886,6 +920,14 @@
 	<!---custom js link--->
 	<script type="text/javascript" src="js/script.js"></script>
 
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init();
+        
+    </script>
+    <!-- Fin AOS animation -->
 
 
 
