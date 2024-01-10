@@ -442,7 +442,7 @@ header.sticky{
 .contact-icons i{
 	height: 40px;
 	width: 40px;
-	background: #12141c;
+	background: #525252;
 	border-radius: 0.5rem;
 	color: var(--main-color);
 	display: inline-flex;
@@ -451,11 +451,13 @@ header.sticky{
 	font-size: 18px;
 	margin-right: 10px;
 	transition: all .40s ease;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2) ;
 }
 .contact-icons i:hover{
-	transform: scale(1.01) translateY(-5px);
+  transform: scale(1.01) translateY(-5px);
 	color: var(--text-color);
 	background: var(--main-color);
+  border: 1px solid black;
 }
 
 .contact-form form{
@@ -467,7 +469,7 @@ form textarea{
 	outline: none;
 	width: 100%;
 	padding: 18px;
-	background: #12141c;
+	background: #a6a6a6;
 	color: var(--text-color);
 	font-size: 1rem;
 	font-weight: 600;
