@@ -21,11 +21,17 @@
 }
 
 body{
-	background: var(--bg-color);
+	background: url(/img/back_dk.jpg);
+  background-position: center;
+  background-size: cover;
 	color: var(--text-color);
   margin: 0;
   padding: 0;
+  background-attachment: fixed;
 }
+
+
+
 header{
 	position: fixed;
 	right: 0;
@@ -189,6 +195,7 @@ header.sticky{
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
 	gap: 2rem;
+  background: url();
 }
 .about-text h4{
 	margin: 10px 0;
@@ -237,6 +244,9 @@ header.sticky{
 
 
 /* inicio service */
+#services{
+  background: var(--bg-color);
+}
 .contentText_servicios{
   background: rgba(126, 25, 25, 0.8) !important;
 }
