@@ -237,6 +237,15 @@ header.sticky{
 
 
 /* inicio service */
+.contentText_servicios{
+  background: rgba(126, 25, 25, 0.8) !important;
+}
+[class*=" imghvr-"], [class^=imghvr-] {
+  background-color: rgb(93, 93, 93) !important;
+}
+.imghvr-fold-right{
+  margin: 1rem;
+}
 
 .main-text{
 	text-align: center;
