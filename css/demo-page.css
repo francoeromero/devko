@@ -15,6 +15,7 @@
 	--main-color: #eb4a4a;
 	--second-color: rgb(33, 33, 33);
 	--other-color: #878787;
+  --gray-color:rgba(213, 207, 206, 0.9);
 	--h1-font: 5.2rem;
 	--h2-font: 3.5rem;
 	--p-font: 1.1rem;
@@ -452,7 +453,7 @@ header.sticky{
 .contact-icons i{
 	height: 40px;
 	width: 40px;
-	background: #525252;
+	background: var(--gray-color);
 	border-radius: 50%;
 	color: var(--main-color);
 	display: inline-flex;
@@ -461,7 +462,7 @@ header.sticky{
 	font-size: 18px;
 	margin-right: 10px;
 	transition: all .40s ease;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) ;
 }
 .contact-icons i:hover{
   transform: scale(1.01) translateY(-5px);
@@ -479,7 +480,7 @@ form textarea{
 	outline: none;
 	width: 100%;
 	padding: 18px;
-	background: #a6a6a6;
+	background: var(--gray-color);
 	color: var(--text-color);
 	font-size: 1rem;
 	font-weight: 600;
@@ -532,7 +533,7 @@ form textarea{
 /* rotulo */
 .rotulo{
   height: 10rem; 
-  background: gray; 
+  background: var(--gray-color); 
   width: 100%;
   display: flex;
   align-items: center;
