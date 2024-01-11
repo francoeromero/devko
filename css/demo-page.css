@@ -664,10 +664,22 @@ form textarea{
 		display: block;
 		margin-left: 4rem;
 	}
-
+	#about{
+		width: 135%;
+	}
+	#services{
+		width: 135%;
+	}
+	.rotulo{
+		width: 135%;
+	}
+	#contact{
+		width: 135%;
+	}
 	#menu-icon{
 		display: block;
 	}
+
 	.navbar{
 		position: absolute;
 		top: -600px;
@@ -695,5 +707,8 @@ form textarea{
 		--h1-font: 3.7rem;
 	  --h2-font: 2.7rem;
 	}
-  
+	.columna1{
+		border: 2px solid red;
+		margin-left: -5rem;
+	}
 }
