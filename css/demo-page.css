@@ -15,7 +15,7 @@
 	--main-color: #eb4a4a;
 	--second-color: rgb(33, 33, 33);
 	--other-color: #878787;
-  --gray-color:rgba(213, 207, 206, 0.9);
+  --gray-color:rgba(213, 207, 206, 0.95);
 	--h1-font: 5.2rem;
 	--h2-font: 3.5rem;
 	--p-font: 1.1rem;
@@ -582,6 +582,9 @@ form textarea{
 }
 
 @media (max-width: 970px){
+	#home{
+		width: 100%;
+	}
   .rotulo{
     align-items: center;
     justify-content: center;
@@ -651,7 +654,12 @@ form textarea{
 }
 
 @media (max-width: 830px){
-
+	#home{
+		width: 135%;
+	}
+	.home-text h1 span{
+		font-size: 1rem;
+	}
 	.content_ppal_servicios{
 		display: block;
 		margin-left: 4rem;
