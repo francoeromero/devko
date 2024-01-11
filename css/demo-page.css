@@ -195,7 +195,7 @@ header.sticky{
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
 	gap: 2rem;
-  background: url();
+  background: rgba(213, 207, 206, 0.9);
 }
 .about-text h4{
 	margin: 10px 0;
@@ -245,10 +245,10 @@ header.sticky{
 
 /* inicio service */
 #services{
-  background: var(--bg-color);
+  background: none;
 }
 .contentText_servicios{
-  background: rgba(126, 25, 25, 0.8) !important;
+  background: #843b3b !important;
 }
 [class*=" imghvr-"], [class^=imghvr-] {
   background-color: rgb(93, 93, 93) !important;
